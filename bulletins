@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bulletins</title>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <label for="languageSwitcher">Language:</label>
+  <select id="languageSwitcher">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+  </select>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" data-en="Home" data-es="Inicio">Home</a> |
+    <a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a> |
+    <a href="giving.html" data-en="Giving" data-es="Donaciones">Giving</a> |
+    <a href="sacraments.html" data-en="Sacraments" data-es="Sacramentos">Sacraments</a> |
+    <a href="events.html" data-en="Events" data-es="Eventos">Events</a> |
+    <a href="bulletins.html" data-en="Bulletins" data-es="Boletines">Bulletins</a> |
+    <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
+  </nav>
+
+  <!-- Bulletins Section -->
+  <h1 data-en="Weekly Bulletins" data-es="Boletines Semanales">Weekly Bulletins</h1>
+
+  <p data-en="Stay informed with our latest parish news and announcements." data-es="Manténgase informado con nuestras últimas noticias y anuncios parroquiales.">
+    Stay informed with our latest parish news and announcements.
+  </p>
+
+  <!-- Sample Bulletin -->
+  <h2 data-en="April 21 Bulletin" data-es="Boletín del 21 de Abril">April 21 Bulletin</h2>
+  <a href="bulletins/april-21.pdf" target="_blank" data-en="Download PDF" data-es="Descargar PDF">Download PDF</a>
+
+  <!-- More bulletins can follow the same structure -->
+
+  <!-- Flocknote Sign-Up -->
+  <h2 data-en="Stay Connected via Flocknote" data-es="Manténgase Conectado con Flocknote">Stay Connected via Flocknote</h2>
+  <p data-en="Sign up with your email or phone to receive weekly updates." data-es="Regístrese con su correo electrónico o teléfono para recibir actualizaciones semanales.">
+    Sign up with your email or phone to receive weekly updates.
+  </p>
+  <!-- Replace below with actual Flocknote embed or link -->
+  <a href="https://yourparish.flocknote.com" target="_blank" data-en="Join Now" data-es="Únase Ahora">Join Now</a>
+
+  <!-- Footer -->
+  <footer>
+    <p data-en="Mass Schedule" data-es="Horario de Misas">Mass Schedule</p>
+    <p data-en="Address" data-es="Dirección">Address</p>
+    <p data-en="Phone" data-es="Teléfono">Phone</p>
+    <p data-en="Email" data-es="Correo Electrónico">Email</p>
+    <p data-en="Follow us on social media" data-es="Síguenos en redes sociales">Follow us on social media</p>
+  </footer>
+
+  <!-- Language Toggle Script -->
+  <script>
+    const switcher = document.getElementById('languageSwitcher');
+    const elements = document.querySelectorAll('[data-en]');
+    switcher.addEventListener('change', function () {
+      const lang = this.value;
+      elements.forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    });
+  </script>
+
+</body>
+</html>
