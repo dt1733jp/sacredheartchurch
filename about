@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us</title>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <label for="languageSwitcher">Language:</label>
+  <select id="languageSwitcher">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+  </select>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" data-en="Home" data-es="Inicio">Home</a> |
+    <a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a> |
+    <a href="giving.html" data-en="Giving" data-es="Donaciones">Giving</a> |
+    <a href="sacraments.html" data-en="Sacraments" data-es="Sacramentos">Sacraments</a> |
+    <a href="events.html" data-en="Events" data-es="Eventos">Events</a> |
+    <a href="bulletins.html" data-en="Bulletins" data-es="Boletines">Bulletins</a> |
+    <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <h1 data-en="About Our Parish" data-es="Sobre Nuestra Parroquia">About Our Parish</h1>
+
+  <h2 data-en="Our History" data-es="Nuestra Historia">Our History</h2>
+  <p data-en="Insert your parish history here." data-es="Inserte la historia de su parroquia aquí.">
+    Insert your parish history here.
+  </p>
+
+  <h2 data-en="Meet the Pastor" data-es="Conozca al Pastor">Meet the Pastor</h2>
+  <p data-en="Include the pastor’s bio or greeting here." data-es="Incluya la biografía o el saludo del pastor aquí.">
+    Include the pastor’s bio or greeting here.
+  </p>
+
+  <h2 data-en="Staff Directory" data-es="Directorio del Personal">Staff Directory</h2>
+  <p data-en="List your parish staff and their roles." data-es="Enumere al personal de la parroquia y sus cargos.">
+    List your parish staff and their roles.
+  </p>
+
+  <h2 data-en="Office Hours" data-es="Horario de Oficina">Office Hours</h2>
+  <p data-en="Office hours and location details here." data-es="Horario y ubicación de la oficina aquí.">
+    Office hours and location details here.
+  </p>
+
+  <h2 data-en="Safe Environment" data-es="Ambiente Seguro">Safe Environment</h2>
+  <p data-en="Information on parish safe environment practices." data-es="Información sobre las prácticas de ambiente seguro de la parroquia.">
+    Information on parish safe environment practices.
+  </p>
+
+  <!-- Footer -->
+  <footer>
+    <p data-en="Mass Schedule" data-es="Horario de Misas">Mass Schedule</p>
+    <p data-en="Address" data-es="Dirección">Address</p>
+    <p data-en="Phone" data-es="Teléfono">Phone</p>
+    <p data-en="Email" data-es="Correo Electrónico">Email</p>
+    <p data-en="Follow us on social media" data-es="Síguenos en redes sociales">Follow us on social media</p>
+  </footer>
+
+  <!-- Language Toggle Script -->
+  <script>
+    const switcher = document.getElementById('languageSwitcher');
+    const elements = document.querySelectorAll('[data-en]');
+    switcher.addEventListener('change', function () {
+      const lang = this.value;
+      elements.forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    });
+  </script>
+
+</body>
+</html>
