@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Events</title>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <label for="languageSwitcher">Language:</label>
+  <select id="languageSwitcher">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+  </select>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" data-en="Home" data-es="Inicio">Home</a> |
+    <a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a> |
+    <a href="giving.html" data-en="Giving" data-es="Donaciones">Giving</a> |
+    <a href="sacraments.html" data-en="Sacraments" data-es="Sacramentos">Sacraments</a> |
+    <a href="events.html" data-en="Events" data-es="Eventos">Events</a> |
+    <a href="bulletins.html" data-en="Bulletins" data-es="Boletines">Bulletins</a> |
+    <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
+  </nav>
+
+  <!-- Events Section -->
+  <h1 data-en="Upcoming Events" data-es="Próximos Eventos">Upcoming Events</h1>
+
+  <p data-en="Stay up to date with our latest parish events and gatherings." data-es="Manténgase al día con nuestros últimos eventos y reuniones parroquiales.">
+    Stay up to date with our latest parish events and gatherings.
+  </p>
+
+  <!-- Sample Event -->
+  <h2 data-en="Parish Picnic – July 20" data-es="Picnic Parroquial – 20 de Julio">Parish Picnic – July 20</h2>
+  <p data-en="Join us for food, games, and community fun after Sunday Mass." data-es="Únase a nosotros para comida, juegos y diversión comunitaria después de la misa dominical.">
+    Join us for food, games, and community fun after Sunday Mass.
+  </p>
+
+  <!-- You can add more events in this format -->
+
+  <!-- Footer -->
+  <footer>
+    <p data-en="Mass Schedule" data-es="Horario de Misas">Mass Schedule</p>
+    <p data-en="Address" data-es="Dirección">Address</p>
+    <p data-en="Phone" data-es="Teléfono">Phone</p>
+    <p data-en="Email" data-es="Correo Electrónico">Email</p>
+    <p data-en="Follow us on social media" data-es="Síguenos en redes sociales">Follow us on social media</p>
+  </footer>
+
+  <!-- Language Toggle Script -->
+  <script>
+    const switcher = document.getElementById('languageSwitcher');
+    const elements = document.querySelectorAll('[data-en]');
+    switcher.addEventListener('change', function () {
+      const lang = this.value;
+      elements.forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    });
+  </script>
+
+</body>
+</html>
