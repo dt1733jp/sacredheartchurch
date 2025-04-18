@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sacraments</title>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <label for="languageSwitcher">Language:</label>
+  <select id="languageSwitcher">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+  </select>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" data-en="Home" data-es="Inicio">Home</a> |
+    <a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a> |
+    <a href="giving.html" data-en="Giving" data-es="Donaciones">Giving</a> |
+    <a href="sacraments.html" data-en="Sacraments" data-es="Sacramentos">Sacraments</a> |
+    <a href="events.html" data-en="Events" data-es="Eventos">Events</a> |
+    <a href="bulletins.html" data-en="Bulletins" data-es="Boletines">Bulletins</a> |
+    <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
+  </nav>
+
+  <!-- Sacraments Section -->
+  <h1 data-en="Sacraments and Mass Times" data-es="Sacramentos y Horarios de Misa">Sacraments and Mass Times</h1>
+
+  <h2 data-en="Mass Times" data-es="Horario de Misas">Mass Times</h2>
+  <p data-en="Include English and Spanish Mass schedule here." data-es="Incluya aquí el horario de misas en inglés y español.">
+    Include English and Spanish Mass schedule here.
+  </p>
+
+  <h2 data-en="Baptism" data-es="Bautismo">Baptism</h2>
+  <p data-en="Information about baptism preparation and registration." data-es="Información sobre la preparación y registro del bautismo.">
+    Information about baptism preparation and registration.
+  </p>
+
+  <h2 data-en="First Communion" data-es="Primera Comunión">First Communion</h2>
+  <p data-en="Details on First Communion classes and celebrations." data-es="Detalles sobre las clases y celebraciones de Primera Comunión.">
+    Details on First Communion classes and celebrations.
+  </p>
+
+  <h2 data-en="Confirmation" data-es="Confirmación">Confirmation</h2>
+  <p data-en="Confirmation preparation and requirements for youth and adults." data-es="Preparación y requisitos para la Confirmación de jóvenes y adultos.">
+    Confirmation preparation and requirements for youth and adults.
+  </p>
+
+  <h2 data-en="Marriage" data-es="Matrimonio">Marriage</h2>
+  <p data-en="Steps and planning for getting married at the parish." data-es="Pasos y planificación para casarse en la parroquia.">
+    Steps and planning for getting married at the parish.
+  </p>
+
+  <h2 data-en="Confession" data-es="Confesión">Confession</h2>
+  <p data-en="Schedule and information for the sacrament of reconciliation." data-es="Horario e información sobre el sacramento de la reconciliación.">
+    Schedule and information for the sacrament of reconciliation.
+  </p>
+
+  <!-- Footer -->
+  <footer>
+    <p data-en="Mass Schedule" data-es="Horario de Misas">Mass Schedule</p>
+    <p data-en="Address" data-es="Dirección">Address</p>
+    <p data-en="Phone" data-es="Teléfono">Phone</p>
+    <p data-en="Email" data-es="Correo Electrónico">Email</p>
+    <p data-en="Follow us on social media" data-es="Síguenos en redes sociales">Follow us on social media</p>
+  </footer>
+
+  <!-- Language Toggle Script -->
+  <script>
+    const switcher = document.getElementById('languageSwitcher');
+    const elements = document.querySelectorAll('[data-en]');
+    switcher.addEventListener('change', function () {
+      const lang = this.value;
+      elements.forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    });
+  </script>
+
+</body>
+</html>
