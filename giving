@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Giving</title>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <label for="languageSwitcher">Language:</label>
+  <select id="languageSwitcher">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+  </select>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" data-en="Home" data-es="Inicio">Home</a> |
+    <a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a> |
+    <a href="giving.html" data-en="Giving" data-es="Donaciones">Giving</a> |
+    <a href="sacraments.html" data-en="Sacraments" data-es="Sacramentos">Sacraments</a> |
+    <a href="events.html" data-en="Events" data-es="Eventos">Events</a> |
+    <a href="bulletins.html" data-en="Bulletins" data-es="Boletines">Bulletins</a> |
+    <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
+  </nav>
+
+  <!-- Giving Section -->
+  <h1 data-en="Support Our Parish" data-es="Apoye Nuestra Parroquia">Support Our Parish</h1>
+
+  <h2 data-en="Online Giving" data-es="Donaciones en Línea">Online Giving</h2>
+  <p data-en="Make a one-time or recurring gift online." data-es="Haga una donación única o recurrente en línea.">
+    Make a one-time or recurring gift online.
+  </p>
+
+  <h2 data-en="Capital Campaign" data-es="Campaña Capital">Capital Campaign</h2>
+  <p data-en="Help us reach our goals for parish improvements." data-es="Ayúdenos a alcanzar nuestras metas para mejoras parroquiales.">
+    Help us reach our goals for parish improvements.
+  </p>
+
+  <h2 data-en="Parish Center Plan" data-es="Plan del Centro Parroquial">Parish Center Plan</h2>
+  <p data-en="Learn more about the future parish center." data-es="Conozca más sobre el futuro centro parroquial.">
+    Learn more about the future parish center.
+  </p>
+
+  <!-- QR Code -->
+  <h3 data-en="Scan to Give" data-es="Escanee para Donar">Scan to Give</h3>
+  <p data-en="Use the QR code below to donate." data-es="Use el código QR a continuación para donar.">
+    Use the QR code below to donate.
+  </p>
+  <!-- Insert your QR code image below -->
+  <img src="qr-placeholder.png" alt="QR Code" width="150" height="150">
+
+  <h2 data-en="How You Can Help" data-es="Cómo Puede Ayudar">How You Can Help</h2>
+  <p data-en="Call the parish office to learn about volunteering opportunities." data-es="Llame a la oficina parroquial para conocer oportunidades de voluntariado.">
+    Call the parish office to learn about volunteering opportunities.
+  </p>
+
+  <!-- Footer -->
+  <footer>
+    <p data-en="Mass Schedule" data-es="Horario de Misas">Mass Schedule</p>
+    <p data-en="Address" data-es="Dirección">Address</p>
+    <p data-en="Phone" data-es="Teléfono">Phone</p>
+    <p data-en="Email" data-es="Correo Electrónico">Email</p>
+    <p data-en="Follow us on social media" data-es="Síguenos en redes sociales">Follow us on social media</p>
+  </footer>
+
+  <!-- Language Toggle Script -->
+  <script>
+    const switcher = document.getElementById('languageSwitcher');
+    const elements = document.querySelectorAll('[data-en]');
+    switcher.addEventListener('change', function () {
+      const lang = this.value;
+      elements.forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    });
+  </script>
+
+</body>
+</html>
